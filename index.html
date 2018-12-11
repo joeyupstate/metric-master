@@ -1,0 +1,60 @@
+
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+<link href="metric.css" type="text/css" rel="stylesheet">
+</head>
+
+
+<body>
+<h1 id ="h11"> Metric Master </h1>
+
+<div class="container">
+
+<div class="databox">
+Miles: <input type= "input" id ="numinput" 
+oninput="kilo(this.value)" onchange="kilo(this.value)"/>
+ </div>
+ 
+<div class="databox">
+Pounds: <input type= "input" id ="weightinput" 
+oninput="kilogram(this.value)" onchange="kilogram(this.value)"/>
+</div>
+
+<div class="databox">
+°F:
+<input type="input" id ="tempinput" oninput="temp(this.value)" onchange="temp(this.value)"/>
+</div>
+
+</div>
+<div id="circle-container">
+<div id ="circleport"><span id="span2">
+ </span></div></div>
+
+ </div>
+
+
+
+<script>
+function kilo(Val)
+
+{
+document.getElementById("circleport").innerHTML = Math.ceil(Val *1.609)+ "KM";
+}
+
+function kilogram(Val2)
+
+{
+document.getElementById("circleport").innerHTML = Math.ceil(Val2 / 2.205) + "KG";
+}
+
+function temp(val3)
+{
+document.getElementById("circleport").innerHTML = Math.ceil((val3 - 32) * 0.5555555555555556) + "°C";
+}
+
+</script>
+
+</body>
+
+</html>
